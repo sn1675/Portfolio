@@ -1,0 +1,296 @@
+@font-face {
+    font-family: 'W95';
+    src: url(../font/W95FA/w95fa.woff);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #008080; /* Couleur de fond Windows 95 */
+    color: #000;
+    overflow: hidden;
+    font-family: 'W95';
+}
+
+.elt{
+    margin-left: 10px;
+    padding-top: 20px;
+}
+
+.computer-icon {
+    margin-left: 20px;
+}
+
+.computer-text{
+    color: #fff;
+    font-size: 75%;
+    margin: 0;
+}
+
+.folder-icon{
+    margin-left : 20px;
+}
+
+.folder-icon:active{
+    background-color: #A9A9A9;
+}
+
+.folder-text{
+    color: #fff;
+    padding-left: 15px;
+    font-size: 75%;
+    margin: 0;
+}
+
+.folder-text-moi{
+    color: #fff;
+    padding-left: 25px;
+    font-size: 75%;
+    margin: 0;
+}
+
+.been{
+    position: absolute;
+    bottom: 50px;
+    left: 15px;
+}
+
+.been-icon{
+    margin-left: 20px;
+    padding-top: 25%;
+}
+
+.been-text{
+    color: #fff;
+    padding-left: 15px;
+    font-size: 75%;
+    margin: 0;
+}
+
+
+#windows95 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.window {
+    background-color: #fff;
+    width: 600px;
+    border: 2px solid #000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none; /* Par défaut, la fenêtre est masquée */
+    z-index: 2; /* Met la fenêtre au-dessus de la barre des tâches */
+}
+
+.title-bar {
+    background-color: #000080;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0% 2%;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    z-index: 2;
+}
+
+.title.p {
+    padding: 0%;
+    margin: 0%;
+}
+
+.imgTitle {
+    height: 40%;
+    width: 40%;
+    margin-right: 15%;
+}
+
+.header {
+    background-color: #000080; /* Couleur de fond de la poignée de fenêtre */
+    height: 1%; /* Hauteur de la poignée */
+    width: 100%;
+    cursor: move; /* Curseur de style "move" pour indiquer la possibilité de déplacement */
+    user-select: none; /* Empêche la sélection de texte pendant le déplacement */
+    padding: 1% 2%; /* Espace de remplissage pour la poignée de fenêtre */
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+#window-header, #demineur-header, #pyng-pong-header, #Graphical-Sort-header,
+#moi-header, #press-header {
+    position: relative; /* Nécessaire pour le déplacement */
+    z-index: 1; /* Assure que la poignée est au premier plan */
+}
+
+#portfolio-window, #demineur-window, #pyng-pong-Window,
+#Graphical-Sort-Window, #moi-window, #press-window {
+    position: absolute; /* Position absolue pour le placement au centre de la page */
+    top: 40%;
+    left: 40%;
+    background-color: #C8C8C8;
+    /*transform: translate(-50%, -50%);*/
+    transform: translate(0%, 0%);
+    display: none; /* Par défaut, la fenêtre est masquée */
+    z-index: 2; /* Met la fenêtre au-dessus de la barre des tâches */
+}
+
+.title-text{
+    font-weight: bolder;
+}
+
+.exempleDemineur, .exemplePong, .exempleGraph{
+    height: 60%;
+    width: 60%;
+}
+
+.logoContact{
+    height: 10%;
+    width: 10%;
+}
+
+.alignLogo{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.lienDiscord{
+    text-decoration: none;
+    padding-left: 3%;
+    color: blue;
+}
+
+.buttons {
+    display: flex;
+}
+
+.close-button, .reduce-button, .fullscreen-button {
+    display: flex;
+    align-items: center; 
+    width: 10px;
+    height: 15px;
+    background-color: #C8C8C8;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.content {
+    padding: 1%;
+}
+
+.windowContent{
+    padding: 2%;
+    background-color: #fff;
+}
+
+.fichier-Content{
+    display: flex;
+}
+
+.Portfolio-image{
+    padding-left: 10%;
+}
+
+.Portfolio-text-demineur{
+    color: #000;
+    padding-top: 10px;
+    font-size: 75%;
+    margin: 0;
+}
+
+.Portfolio-text-pong{
+    color: #000;
+    padding-top: 10px;
+    font-size: 75%;
+    margin: 0;
+}
+
+.Portfolio-text-sort{
+    color: #000;
+    padding-top: 10px;
+    font-size: 75%;
+    margin: 0;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between; /* Sépare les boutons de gauche et l'heure à droite */
+    align-items: center;
+    background-color: #c0c0c0; /* Similaire à Windows 95 */
+    border-top: 2px solid #000;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 0.5%;
+    align-items: center;
+}
+
+.start-button {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border-color: #000;
+}
+
+.start-button:active{
+    background-color: #A9A9A9;
+}
+
+.start-icon {
+    width: 20px;
+    height: 20px;
+    background-color: #C8C8C8;
+    margin-bottom: 10px;
+    margin-right: 15px;
+}
+
+.start-text {
+    font-weight: bold;
+    color: #000;
+    font-size: 110%;
+}
+
+.footeronglet{
+    height: 35px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border-color: #000;
+    margin-left: 4%;
+    display: none;
+}
+
+.footer-clock {
+    min-width: 60px; /* Assure une taille minimale pour le bouton de l'heure */
+    text-align: center;
+}
+
+.footer-text{
+    font-weight: bold;
+    color: #000;
+    margin: 0;
+    font-size: 105%;
+}
+
+.taskbar {
+    display: flex;
+    gap: 5px;
+}
