@@ -1,3 +1,7 @@
+:root {
+    --backColor: #008080;
+}
+
 @font-face {
     font-family: 'W95';
     src: url(../font/W95FA/w95fa.woff);
@@ -6,20 +10,21 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #008080; /* Couleur de fond Windows 95 */
+    background-color: var(--backColor);
     color: #000;
     overflow: hidden;
-    font-family: 'W95';
+    font-family: 'W95', serif;
 }
 
 .elt{
-    margin-left: 10px;
-    padding-top: 20px;
+    margin-left: 1%;
+    padding-top: 2%;
 }
 
-.computer-icon {
-    margin-left: 20px;
+.computer-icon, .folder-icon, .been-icon {
+    margin-left: 2%;
+    width: 2.5%;
+    height: 2.5%;
 }
 
 .computer-text{
@@ -28,11 +33,7 @@ body {
     margin: 0;
 }
 
-.folder-icon{
-    margin-left : 20px;
-}
-
-.folder-icon:active{
+.computer-icon:hover, .folder-icon:hover{
     background-color: #A9A9A9;
 }
 
@@ -43,22 +44,8 @@ body {
     margin: 0;
 }
 
-.folder-text-moi{
-    color: #fff;
-    padding-left: 25px;
-    font-size: 75%;
-    margin: 0;
-}
-
 .been{
-    position: absolute;
-    bottom: 50px;
-    left: 15px;
-}
-
-.been-icon{
-    margin-left: 20px;
-    padding-top: 25%;
+    bottom: 0;
 }
 
 .been-text{
@@ -111,8 +98,6 @@ body {
 }
 
 .imgTitle {
-    height: 40%;
-    width: 40%;
     margin-right: 15%;
 }
 
@@ -228,7 +213,7 @@ body {
     display: flex;
     justify-content: space-between; /* Sépare les boutons de gauche et l'heure à droite */
     align-items: center;
-    background-color: #c0c0c0; /* Similaire à Windows 95 */
+    background-color: #c0c0c0;
     border-top: 2px solid #000;
     position: fixed;
     bottom: 0;
@@ -279,7 +264,8 @@ body {
 }
 
 .footer-clock {
-    min-width: 60px; /* Assure une taille minimale pour le bouton de l'heure */
+    min-width: 1%;
+    padding-right: 1%;
     text-align: center;
 }
 
