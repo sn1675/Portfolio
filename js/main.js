@@ -1,4 +1,4 @@
-v document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function() {
      const windows = {
         portfolio: {
             window: document.getElementById("portfolio-window"),
@@ -91,5 +91,8 @@ v document.addEventListener("DOMContentLoaded", function() {
         document.getElementById("hour-footer").innerHTML = heureAcc + ':' + minuteAcc;
     } setInterval(printHeure, 10000)
 });
+
+/*peu être faire une automatisation des "pages" avec par exemple une base donc fen
+avec la barre de mouvement généré par js et je rejoute ce que je veux dedans*/
 
 /* faire le blue */

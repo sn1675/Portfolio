@@ -1,5 +1,6 @@
 :root {
     --backColor: #008080;
+    --backColorButton: #C8C8C8;
 }
 
 @font-face {
@@ -27,34 +28,26 @@ body {
     height: 2.5%;
 }
 
-.computer-text{
+.computer-text, .folder-text, .been-text{
     color: #fff;
-    font-size: 75%;
-    margin: 0;
+    font-size: 85%;
+    margin-left: 4vh;
 }
 
 .computer-icon:hover, .folder-icon:hover{
     background-color: #A9A9A9;
 }
 
-.folder-text{
-    color: #fff;
-    padding-left: 15px;
-    font-size: 75%;
-    margin: 0;
-}
-
-.been{
+/*#clippy {
+    display: flex;
+    justify-content: end;
     bottom: 0;
 }
 
-.been-text{
-    color: #fff;
-    padding-left: 15px;
-    font-size: 75%;
-    margin: 0;
-}
-
+#clippy img {
+    height: 10%;
+    width: 10%;
+}*/
 
 #windows95 {
     display: flex;
@@ -163,12 +156,17 @@ body {
 
 .close-button, .reduce-button, .fullscreen-button {
     display: flex;
-    align-items: center; 
-    width: 10px;
-    height: 15px;
-    background-color: #C8C8C8;
-    margin-left: 5px;
+    align-items: center;
+    height: 2vh;
+    width: 2vh;
+    background-color: var(--backColorButton);
+    margin-left: 5%;
     cursor: pointer;
+}
+
+.close-button:hover {
+    background-color: red;
+    border-color: red;
 }
 
 .content {
