@@ -43,6 +43,13 @@ document.addEventListener("DOMContentLoaded", function() {
             closeButton: document.getElementById("closeButtonpress"),
             footer: document.getElementById("press-footer"),
         },
+        bin:{
+            window: document.getElementById("bin-window"),
+            header: document.getElementById("bin-header"),
+            folderButton: document.getElementById("bin-button"),
+            closeButton: document.getElementById("closeButtonbin"),
+            footer: document.getElementById("bin-footer"),
+        },
     };
 
     function openWindow(window) {
@@ -90,9 +97,5 @@ document.addEventListener("DOMContentLoaded", function() {
 
         document.getElementById("hour-footer").innerHTML = heureAcc + ':' + minuteAcc;
     } setInterval(printHeure, 10000)
+    printHeure();
 });
-
-/*peu être faire une automatisation des "pages" avec par exemple une base donc fen
-avec la barre de mouvement généré par js et je rejoute ce que je veux dedans*/
-
-/* faire le blue */

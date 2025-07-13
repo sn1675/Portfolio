@@ -31,7 +31,9 @@ body {
 .computer-text, .folder-text, .been-text{
     color: #fff;
     font-size: 85%;
-    margin-left: 4vh;
+    margin-left: 2%;
+    margin-right: 0;
+    margin-top: 0.3%;
 }
 
 .computer-icon:hover, .folder-icon:hover{
@@ -49,42 +51,6 @@ body {
     width: 10%;
 }*/
 
-#windows95 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-.window {
-    background-color: #fff;
-    width: 600px;
-    border: 2px solid #000;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: none; /* Par défaut, la fenêtre est masquée */
-    z-index: 2; /* Met la fenêtre au-dessus de la barre des tâches */
-}
-
-.title-bar {
-    background-color: #000080;
-    color: #fff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0% 2%;
-}
-
-.title {
-    display: flex;
-    align-items: center;
-    font-weight: bold;
-    z-index: 2;
-}
-
 .title.p {
     padding: 0%;
     margin: 0%;
@@ -92,36 +58,6 @@ body {
 
 .imgTitle {
     margin-right: 15%;
-}
-
-.header {
-    background-color: #000080; /* Couleur de fond de la poignée de fenêtre */
-    height: 1%; /* Hauteur de la poignée */
-    width: 100%;
-    cursor: move; /* Curseur de style "move" pour indiquer la possibilité de déplacement */
-    user-select: none; /* Empêche la sélection de texte pendant le déplacement */
-    padding: 1% 2%; /* Espace de remplissage pour la poignée de fenêtre */
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-}
-
-#window-header, #demineur-header, #pyng-pong-header, #Graphical-Sort-header,
-#moi-header, #press-header {
-    position: relative; /* Nécessaire pour le déplacement */
-    z-index: 1; /* Assure que la poignée est au premier plan */
-}
-
-#portfolio-window, #demineur-window, #pyng-pong-Window,
-#Graphical-Sort-Window, #moi-window, #press-window {
-    position: absolute; /* Position absolue pour le placement au centre de la page */
-    top: 40%;
-    left: 40%;
-    background-color: #C8C8C8;
-    /*transform: translate(-50%, -50%);*/
-    transform: translate(0%, 0%);
-    display: none; /* Par défaut, la fenêtre est masquée */
-    z-index: 2; /* Met la fenêtre au-dessus de la barre des tâches */
 }
 
 .title-text{
@@ -144,67 +80,14 @@ body {
     align-items: center;
 }
 
+#pressButton {
+    margin-left: 3.5%;
+}
+
 .lienDiscord{
     text-decoration: none;
     padding-left: 3%;
     color: blue;
-}
-
-.buttons {
-    display: flex;
-}
-
-.close-button, .reduce-button, .fullscreen-button {
-    display: flex;
-    align-items: center;
-    height: 2vh;
-    width: 2vh;
-    background-color: var(--backColorButton);
-    margin-left: 5%;
-    cursor: pointer;
-}
-
-.close-button:hover {
-    background-color: red;
-    border-color: red;
-}
-
-.content {
-    padding: 1%;
-}
-
-.windowContent{
-    padding: 2%;
-    background-color: #fff;
-}
-
-.fichier-Content{
-    display: flex;
-}
-
-.Portfolio-image{
-    padding-left: 10%;
-}
-
-.Portfolio-text-demineur{
-    color: #000;
-    padding-top: 10px;
-    font-size: 75%;
-    margin: 0;
-}
-
-.Portfolio-text-pong{
-    color: #000;
-    padding-top: 10px;
-    font-size: 75%;
-    margin: 0;
-}
-
-.Portfolio-text-sort{
-    color: #000;
-    padding-top: 10px;
-    font-size: 75%;
-    margin: 0;
 }
 
 .footer {
