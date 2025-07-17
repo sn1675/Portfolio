@@ -18,26 +18,31 @@ body {
 }
 
 .elt{
+    display: grid;
     margin-left: 1%;
     padding-top: 2%;
 }
 
 .computer-icon, .folder-icon, .been-icon {
     margin-left: 2%;
-    width: 2.5%;
-    height: 2.5%;
+    height: 90%;
+    width: 3%;
 }
 
 .computer-text, .folder-text, .been-text{
     color: #fff;
-    font-size: 85%;
+    font-size: 90%;
+    width: 3%;
     margin-left: 2%;
-    margin-right: 0;
-    margin-top: 0.3%;
+    text-align: center;
 }
 
 .computer-icon:hover, .folder-icon:hover{
     background-color: #A9A9A9;
+}
+
+.moi-text-pres {
+    margin: 0;
 }
 
 /*#clippy {
@@ -82,6 +87,10 @@ body {
 
 #pressButton {
     margin-left: 3.5%;
+}
+
+#demineurButton, #pyng-pongButton, #GaphicalSortButton, #websiteButton {
+    margin-left: 15%;
 }
 
 .lienDiscord{

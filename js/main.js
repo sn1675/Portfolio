@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
             closeButton: document.getElementById("closeButtonMoi"),
             footer: document.getElementById("moi-footer"),
         },
-        
+        //Portfolio/jeux
         demineur: {
             window: document.getElementById("demineur-window"),
             header: document.getElementById("demineur-header"),
@@ -29,6 +29,8 @@ document.addEventListener("DOMContentLoaded", function() {
             closeButton: document.getElementById("closeButtonPyngPong"),
             footer: document.getElementById("pyng-pong-footer"),
         },
+
+         //Portfolio/simulation
         graph: {
             window: document.getElementById("Graphical-Sort-Window"),
             header: document.getElementById("Graphical-Sort-header"),
@@ -36,6 +38,15 @@ document.addEventListener("DOMContentLoaded", function() {
             closeButton: document.getElementById("closeButtonGraphicalSort"),
             footer: document.getElementById("gaphical-sort-footer"),
         },
+
+        website: {
+            window: document.getElementById("webSite-Window"),
+            header: document.getElementById("webSite-header"),
+            folderButton: document.getElementById("websiteButton"),
+            closeButton: document.getElementById("closeButtonWebSite"),
+            footer: document.getElementById("webSite-footer"),
+        },
+
         pressentation:{
             window: document.getElementById("press-window"),
             header: document.getElementById("press-header"),
