@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
             closeButton: document.getElementById("closeButtonMoi"),
             footer: document.getElementById("moi-footer"),
         },
-        
+        //Portfolio/jeux
         demineur: {
             window: document.getElementById("demineur-window"),
             header: document.getElementById("demineur-header"),
@@ -29,6 +29,8 @@ document.addEventListener("DOMContentLoaded", function() {
             closeButton: document.getElementById("closeButtonPyngPong"),
             footer: document.getElementById("pyng-pong-footer"),
         },
+
+         //Portfolio/simulation
         graph: {
             window: document.getElementById("Graphical-Sort-Window"),
             header: document.getElementById("Graphical-Sort-header"),
@@ -36,12 +38,28 @@ document.addEventListener("DOMContentLoaded", function() {
             closeButton: document.getElementById("closeButtonGraphicalSort"),
             footer: document.getElementById("gaphical-sort-footer"),
         },
+
+        website: {
+            window: document.getElementById("webSite-Window"),
+            header: document.getElementById("webSite-header"),
+            folderButton: document.getElementById("websiteButton"),
+            closeButton: document.getElementById("closeButtonWebSite"),
+            footer: document.getElementById("webSite-footer"),
+        },
+
         pressentation:{
             window: document.getElementById("press-window"),
             header: document.getElementById("press-header"),
             folderButton: document.getElementById("pressButton"),
             closeButton: document.getElementById("closeButtonpress"),
             footer: document.getElementById("press-footer"),
+        },
+        bin:{
+            window: document.getElementById("bin-window"),
+            header: document.getElementById("bin-header"),
+            folderButton: document.getElementById("bin-button"),
+            closeButton: document.getElementById("closeButtonbin"),
+            footer: document.getElementById("bin-footer"),
         },
     };
 
@@ -90,9 +108,5 @@ document.addEventListener("DOMContentLoaded", function() {
 
         document.getElementById("hour-footer").innerHTML = heureAcc + ':' + minuteAcc;
     } setInterval(printHeure, 10000)
+    printHeure();
 });
-
-/*peu être faire une automatisation des "pages" avec par exemple une base donc fen
-avec la barre de mouvement généré par js et je rejoute ce que je veux dedans*/
-
-/* faire le blue */
