@@ -1,67 +1,81 @@
+class AppWindow extends HTMLElement {
+    constructor() {
+        super();
+    }
+
+    connectedCallback() {
+        const tpl = document.getElementById('win-template');
+        if (!tpl) return;
+        const node = tpl.content.firstElementChild.cloneNode(true);
+
+        const winName = this.getAttribute('window') || 'window';
+        const id = this.getAttribute('id') || `${winName}-window`;
+        const title = this.getAttribute('title') || '';
+        const img = this.getAttribute('img') || this.getAttribute('icon') || '';
+
+        node.dataset.window = winName;
+        node.id = id;
+
+        const headerEl = node.querySelector('.header');
+        if (headerEl) headerEl.id = `${winName}-header`;
+
+        const closeBtn = node.querySelector('.close-button');
+        if (closeBtn) closeBtn.id = `closeButton-${winName}`;
+
+        const titleText = node.querySelector('.window-title-text') || node.querySelector('.title-text') || node.querySelector('.title p');
+        let imgEl = node.querySelector('.imgTitle');
+
+        if (img && !imgEl && titleText) {
+            const createdImg = document.createElement('img');
+            createdImg.className = 'imgTitle';
+            try {
+                createdImg.src = new URL(img, document.baseURI).href; // résout les chemins relatifs
+            } catch (e) {
+                createdImg.src = img;
+            }
+            createdImg.alt = title || '';
+            createdImg.width = 20;
+            createdImg.height = 20;
+            createdImg.style.objectFit = 'cover';
+            createdImg.style.marginRight = '8px';
+            titleText.parentNode.insertBefore(createdImg, titleText);
+            imgEl = createdImg;
+        }
+
+        if (titleText) titleText.textContent = title;
+        if (imgEl && img) {
+            try {
+                imgEl.src = new URL(img, document.baseURI).href;
+            } catch (e) {
+                imgEl.src = img;
+            }
+        }
+
+        const contentSlot = node.querySelector('.windowContent');
+        if (contentSlot) {
+            contentSlot.innerHTML = this.innerHTML;
+        }
+
+        this.replaceWith(node);
+    }
+}
+
+customElements.define('app-window', AppWindow);
+
 document.addEventListener("DOMContentLoaded", function() {
-     const windows = {
-        portfolio: {
-            window: document.getElementById("portfolio-window"),
-            header: document.getElementById("window-header"),
-            folderButton: document.getElementById("folder-portfollio-button"),
-            closeButton: document.getElementById("closeButton"),
-            footer: document.getElementById("Portfolio-footer"),
-        },
-        moi: {
-            window: document.getElementById("moi-window"),
-            header: document.getElementById("moi-header"),
-            folderButton: document.getElementById("folder-moi-button"),
-            closeButton: document.getElementById("closeButtonMoi"),
-            footer: document.getElementById("moi-footer"),
-        },
-        //Portfolio/jeux
-        demineur: {
-            window: document.getElementById("demineur-window"),
-            header: document.getElementById("demineur-header"),
-            folderButton: document.getElementById("demineurButton"),
-            closeButton: document.getElementById("closeButtondemineur"),
-            footer: document.getElementById("demineur-footer"),
-        },
-        pyngpong: {
-            window: document.getElementById("pyng-pong-Window"),
-            header: document.getElementById("pyng-pong-header"),
-            folderButton: document.getElementById("pyng-pongButton"),
-            closeButton: document.getElementById("closeButtonPyngPong"),
-            footer: document.getElementById("pyng-pong-footer"),
-        },
+     const windows = {};
 
-         //Portfolio/simulation
-        graph: {
-            window: document.getElementById("Graphical-Sort-Window"),
-            header: document.getElementById("Graphical-Sort-header"),
-            folderButton: document.getElementById("GaphicalSortButton"),
-            closeButton: document.getElementById("closeButtonGraphicalSort"),
-            footer: document.getElementById("gaphical-sort-footer"),
-        },
+    document.querySelectorAll("[data-window]").forEach(el => {
+         const name = el.dataset.window;
 
-        website: {
-            window: document.getElementById("webSite-Window"),
-            header: document.getElementById("webSite-header"),
-            folderButton: document.getElementById("websiteButton"),
-            closeButton: document.getElementById("closeButtonWebSite"),
-            footer: document.getElementById("webSite-footer"),
-        },
-
-        pressentation:{
-            window: document.getElementById("press-window"),
-            header: document.getElementById("press-header"),
-            folderButton: document.getElementById("pressButton"),
-            closeButton: document.getElementById("closeButtonpress"),
-            footer: document.getElementById("press-footer"),
-        },
-        bin:{
-            window: document.getElementById("bin-window"),
-            header: document.getElementById("bin-header"),
-            folderButton: document.getElementById("bin-button"),
-            closeButton: document.getElementById("closeButtonbin"),
-            footer: document.getElementById("bin-footer"),
-        },
-    };
+         windows[name] = {
+             window: el,
+             header: document.getElementById(`${name}-header`),
+             folderButton: document.getElementById(`folder-${name}-button`),
+             closeButton: document.getElementById(`closeButton-${name}`),
+             footer: document.getElementById(`${name}-footer`),
+         };
+     });
 
     function openWindow(window) {
         window.window.style.display = "block";
