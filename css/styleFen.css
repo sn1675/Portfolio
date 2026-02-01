@@ -32,14 +32,14 @@
     align-items: center;
 }
 
-#window-header, #demineur-header, #pyng-pong-header, #Graphical-Sort-header,
-#moi-header, #press-header, #bin-header, #webSite-header {
+#window-header, #demineur-header, #pyng-pong-header, #graphical-sort-header,
+#moi-header, #press-header, #bin-header, #website-header {
     position: relative; /* Nécessaire pour le déplacement */
     z-index: 1; /* Assure que la poignée est au premier plan */
 }
 
-#portfolio-window, #demineur-window, #pyng-pong-Window,
-#Graphical-Sort-Window, #moi-window, #press-window, #bin-window, #webSite-Window {
+#portfolio-window, #demineur-window, #pyng-pong-window,
+#graphical-sort-window, #moi-window, #press-window, #bin-window, #website-window {
     position: absolute; /* Position absolue pour le placement au centre de la page */
     top: 40%;
     left: 40%;

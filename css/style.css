@@ -89,8 +89,13 @@ body {
     margin-left: 3.5%;
 }
 
-#demineurButton, #pyng-pongButton, #GaphicalSortButton, #websiteButton {
+#folder-demineur-button, #folder-pyng-pong-button, #folder-graphical-sort-button,
+#folder-website-button {
     margin-left: 15%;
+}
+
+#folder-press-button {
+    margin-left: 3%;
 }
 
 .lienDiscord{

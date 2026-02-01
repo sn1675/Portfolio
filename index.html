@@ -15,7 +15,7 @@
         </div>
 
         <div class="elt">
-            <img class="folder-icon" id="folder-portfollio-button" src="img/icons/folder.png" alt="">
+            <img class="folder-icon" id="folder-portfolio-button" src="img/icons/folder.png" alt="">
             <p class="folder-text">Portfolio</p>
         </div>
 
@@ -25,7 +25,7 @@
         </div>
 
         <div class="elt">
-            <img class="been-icon" id="bin-button" src="img/icons/been.png" alt="">
+            <img class="been-icon" id="folder-bin-button" src="img/icons/been.png" alt="">
             <p class="been-text">Corbeille</p>
         </div>
     </div>
@@ -35,279 +35,121 @@
     </div>
 -->
     <div id="windows95">
-        <div class="window" id="portfolio-window">
-            <div class="content">
-                <div class="title-bar">
-                    <div class="title">
-                        <img  class="imgTitle" src="img/icons/folder.png" alt="">
-                        <p>Portfolio</p>
-                    </div>
-                    <div class="header" id="window-header">
-                        <!-- Poignée pour le déplacement -->
-                    </div>
-                    <div class="buttons">
-                        <button class="reduce-button">-</button>
-                        <button class="fullscreen-button">o</button>
-                        <button class="close-button" id="closeButton" >x</button>
-                    </div>
+        <app-window window="portfolio" id="portfolio-window" title="Portfolio" icon="img/icons/folder.png">
+            <p>Jeux :</p>
+            <div class="fichier-Content">
+                <div>
+                    <img id="folder-demineur-button" src="img/icons/fichierText.png" alt="">
+                    <p class="Portfolio-text-demineur">Démineur</p>
                 </div>
-
-                <div class="windowContent">
-                    <p>Jeux :</p>
-                    <div class="fichier-Content">
-                        <div>
-                            <img id="demineurButton" src="img/icons/fichierText.png" alt="">
-                            <p class="Portfolio-text-demineur">Démineur</p>
-                        </div>
-                        <div class="Portfolio-image">
-                            <img id="pyng-pongButton" src="img/icons/fichierText.png" alt="">
-                            <p class="Portfolio-text-pong">Pyng-pong</p>
-                        </div>
-                    </div>
-
-                    <p>Simulation:</p>
-
-                    <div class="fichier-Content">
-                        <div>
-                            <img id="GaphicalSortButton" src="img/icons/fichierText.png" alt="">
-                            <p class="Portfolio-text-sort">Graphical-Sort</p>
-                        </div>
-
-                        <!--
-                        <div class="Portfolio-image">
-                            <img id="" src="../img/icons/fichierText.png" alt="">
-                            <p class="Portfolio-text-cravity">Cravity</p>
-                        </div>
-                        -->
-                    </div>
-
-                    <p>Autre:</p>
-                    <div class="fichier-Content">
-                        <div>
-                            <img id="websiteButton" src="img/icons/fichierText.png" alt="">
-                            <p class="Portfolio-text-sort">Ce site web</p>
-                        </div>
-                    </div>
-                </div>
-
-                
-            </div>
-        </div>
-
-        <div class="window" id="demineur-window">
-            <div class="content">
-                <div class="title-bar">
-                    <div class="title">
-                        <img  class="imgTitle" src="img/icons/fichierText.png" alt="">
-                        <p>Démineur</p>
-                    </div>
-                    <div class="header" id="demineur-header">
-                    </div>
-                    <div class="buttons">
-                        <button class="reduce-button">-</button>
-                        <button class="fullscreen-button">o</button>
-                        <button class="close-button" id="closeButtondemineur">x</button>
-                    </div>
-                </div>
-
-                <div class="windowContent">
-
-                    <p class="titre-text">Le Demineur</p>
-                    <img class="exempleDemineur" src="img/exemplePortfolio/demineur.gif" alt="">
-                    <p>Langage : Python</p>
-                    <p>Librairie(s) : Tkinter</p>
-                    <p>Description :  Qui ne se souvien pas, enfant on jouait sur les jeux installé directement sur l'OS de Window, le démienur en faisait parti. <br>
-                    voici mon premier vrai gros projet, un demineur fait entièrement en Python. <br> Ce démineur a plusieurs modes de jeux, comme facile, expert ou encore aléatoire. Ils permettent
-                    de changer le nombre de cases et de mines dans le jeu pour rajouter du piment à vos parties.</p>
-                </div>
-
-            </div>
-        </div>
-
-        <div class="window" id="pyng-pong-Window">
-            <div class="content">
-                <div class="title-bar">
-                    <div class="title">
-                        <img  class="imgTitle" src="img/icons/fichierText.png" alt="">
-                        <p>Pyng-pong</p>
-                    </div>
-                    <div class="header" id="pyng-pong-header">
-                        <!-- Poignée pour le déplacement -->
-                    </div>
-                    <div class="buttons">
-                        <button class="reduce-button">-</button>
-                        <button class="fullscreen-button">o</button>
-                        <button class="close-button" id="closeButtonPyngPong">x</button>
-                    </div>
-                </div>
-
-                <div class="windowContent">
-                    <p class="titre-text">Pyng-Pong</p>
-                    <img class="exemplePong" src="img/exemplePortfolio/pong.gif" alt="">
-                    <p>Langage : Python</p>
-                    <p>Librairie(s) : Pygame</p>
-                    <p>Description : Le Pong est un grand clasique, c'est l'un des premier jeux d'arcade, il fallais donc forcement que je crée ma propre version du pong <br>
-                    donc voici sous vos yeux pyng-pong un pong fait en Python, <br> mais petite particularitée il y a des supers pouvoirs.</p>
+                <div class="Portfolio-image">
+                    <img id="folder-pyng-pong-button" src="img/icons/fichierText.png" alt="">
+                    <p class="Portfolio-text-pong">Pyng-pong</p>
                 </div>
             </div>
-        </div>
 
-        <div class="window" id="Graphical-Sort-Window">
-            <div class="content">
-                <div class="title-bar">
-                    <div class="title">
-                        <img  class="imgTitle" src="img/icons/fichierText.png" alt="">
-                        <p>Graphical-Sort</p>
-                    </div>
-                    <div class="header" id="Graphical-Sort-header">
-                        <!-- Poignée pour le déplacement -->
-                    </div>
-                    <div class="buttons">
-                        <button class="reduce-button">-</button>
-                        <button class="fullscreen-button">o</button>
-                        <button class="close-button" id="closeButtonGraphicalSort">x</button>
-                    </div>
+            <p>Simulation:</p>
+
+            <div class="fichier-Content">
+                <div>
+                    <img id="folder-graphical-sort-button" src="img/icons/fichierText.png" alt="">
+                    <p class="Portfolio-text-sort">Graphical-Sort</p>
                 </div>
 
-                <div class="windowContent">
-                    <p class="titre-text">GaphicalSort</p>
-                    <img class="exempleGraph" src="img/exemplePortfolio/GaphicalSort.gif" alt="">
-                    <p>Langage : Python</p>
-                    <p>Librairie(s) : Pygame</p>
-                    <p>Description : Si vous avez déjà codé quelques projets, il vous ai surement arrivé de tomber sur des algorithmes de tri, <br>ou encore mieux des vidéos de "sort"
-                    sur youtube dnas lequel on voit le fonctionnement des différents algorithmes de tris. <br>Voici donc mon projet GraphicalSort qui comme son nom l'indique, permet de voir
-                    Gaphiquement le tri se réaliser. sur la vidéo ci dessus vous pouvez donc voir l'algorithme de tri : "tri par insertion" qui tri une liste de nombres mélangées aléatoirement <br>
-                    de 1 a 100</p>
+                <!--
+                <div class="Portfolio-image">
+                    <img id="" src="../img/icons/fichierText.png" alt="">
+                    <p class="Portfolio-text-cravity">Cravity</p>
                 </div>
-
+                -->
             </div>
-        </div>
 
-        <div class="window" id="webSite-Window">
-            <div class="content">
-                <div class="title-bar">
-                    <div class="title">
-                        <img  class="imgTitle" src="img/icons/fichierText.png" alt="">
-                        <p>Portfolio</p>
-                    </div>
-                    <div class="header" id="webSite-header">
-                        <!-- Poignée pour le déplacement -->
-                    </div>
-                    <div class="buttons">
-                        <button class="reduce-button">-</button>
-                        <button class="fullscreen-button">o</button>
-                        <button class="close-button" id="closeButtonWebSite">x</button>
-                    </div>
-                </div>
-
-                <div class="windowContent">
-                    <p>Mon siteWeb portfolio</p>
-                    <br>
-                    <p>langages: HTML, CSS, JS</p>
-                    <br>
-                    <p>Description: Je vous présente le site web sur lequel vous vous trouvez, mon portfolio. <br>
-                        Ce site web sert principalement a promouvoir mes projets et par exetention
-                        montrer une partie de mes capacitées en dévloppement informatique. <br>
-                        Comme vous avez pu le remarquer je m'inspire énormement de l'estetisme de window 95® <br><br>
-                        Mon portfolio n'est pas encore terminé et il manque quelques amélioration et projets que je n'ai pas encore ajouté
-                        ou bien aboutis. <br>
-                        Si vous remarquez un comportement qui vous parrait anormal merci de me transmètre l'infomation pour que
-                        je puisse corriger les éventuels bug ou défauts de conception. <br>
-                        en vous souhaitant une bonne visite de mon site et un grand merci pour le temps que vous accodez pour l'explorer ! <3
-                    </p>
+            <p>Autre:</p>
+            <div class="fichier-Content">
+                <div>
+                    <img id="folder-website-button" src="img/icons/fichierText.png" alt="">
+                    <p class="Portfolio-text-sort">Ce site web</p>
                 </div>
             </div>
-        </div>
+        </app-window>
 
+        <app-window window="demineur" id="demineur-window" title="Démineur" icon="img/icons/fichierText.png">
+                <p class="titre-text">Le Demineur</p>
+                <img class="exempleDemineur" src="img/exemplePortfolio/demineur.gif" alt="">
+                <p>Langage : Python</p>
+                <p>Librairie(s) : Tkinter</p>
+                <p>Description :  Qui ne se souvien pas, enfant on jouait sur les jeux installé directement sur l'OS de Window, le démienur en faisait parti. <br>
+                voici mon premier vrai gros projet, un demineur fait entièrement en Python. <br> Ce démineur a plusieurs modes de jeux, comme facile, expert ou encore aléatoire. Ils permettent
+                de changer le nombre de cases et de mines dans le jeu pour rajouter du piment à vos parties.</p>
+        </app-window>
 
-        <div class="window" id="moi-window">
-            <div class="content">
-                <div class="title-bar">
-                    <div class="title">
-                        <img  class="imgTitle" src="img/icons/folder.png" alt="">
-                        <p>Moi</p>
-                    </div>
-                    <div class="header" id="moi-header">
-                        <!-- Poignée pour le déplacement -->
-                    </div>
-                    <div class="buttons">
-                        <button class="reduce-button">-</button>
-                        <button class="fullscreen-button">o</button>
-                        <button class="close-button" id="closeButtonMoi">x</button>
-                    </div>
-                </div>
-
-                <div class="windowContent">
-                    <img id="pressButton" src="img/icons/fichierText.png" alt="">
-                    <p class="moi-text-pres">présentation</p>
-                </div>
+        <app-window window="pyng-pong" id="pyng-pong-window" title="Pyng-pong" icon="img/icons/fichierText.png">
+            <div class="windowContent">
+                <p class="titre-text">Pyng-Pong</p>
+                <img class="exemplePong" src="img/exemplePortfolio/pong.gif" alt="">
+                <p>Langage : Python</p>
+                <p>Librairie(s) : Pygame</p>
+                <p>Description : Le Pong est un grand clasique, c'est l'un des premier jeux d'arcade, il fallais donc forcement que je crée ma propre version du pong <br>
+                donc voici sous vos yeux pyng-pong un pong fait en Python, <br> mais petite particularitée il y a des supers pouvoirs.</p>
             </div>
-        </div>
+        </app-window>
 
-        <div class="window" id="press-window">
-            <div class="content">
-                <div class="title-bar">
-                    <div class="title">
-                        <img  class="imgTitle" src="img/icons/fichierText.png" alt="">
-                        <p>Présentation</p>
-                    </div>
-                    <div class="header" id="press-header">
-                        <!-- Poignée pour le déplacement -->
-                    </div>
-                    <div class="buttons">
-                        <button class="reduce-button">-</button>
-                        <button class="fullscreen-button">o</button>
-                        <button class="close-button" id="closeButtonpress">x</button>
-                    </div>
-                </div>
+        <app-window window="graphical-sort" id="graphical-sort-window" title="Graphical-Sort" icon="img/icons/fichierText.png">
+            <p class="titre-text">GaphicalSort</p>
+            <img class="exempleGraph" src="img/exemplePortfolio/GaphicalSort.gif" alt="">
+            <p>Langage : Python</p>
+            <p>Librairie(s) : Pygame</p>
+            <p>Description : Si vous avez déjà codé quelques projets, il vous ai surement arrivé de tomber sur des algorithmes de tri, <br>ou encore mieux des vidéos de "sort"
+            sur youtube dnas lequel on voit le fonctionnement des différents algorithmes de tris. <br>Voici donc mon projet GraphicalSort qui comme son nom l'indique, permet de voir
+            Gaphiquement le tri se réaliser. sur la vidéo ci dessus vous pouvez donc voir l'algorithme de tri : "tri par insertion" qui tri une liste de nombres mélangées aléatoirement <br>
+            de 1 a 100</p>
+        </app-window>
 
-                <div class="windowContent">
+        <app-window window="website" id="website-window" title="Ce site web" icon="img/icons/fichierText.png">
+            <p class="titre-text">Mon site web portfolio</p>
+            <img class="exempleWebsite" src="img/exemplePortfolio/website.gif" alt="">
+            <p>Langages : HTML, CSS, JS</p>
+            <p>Description : Je vous présente le site web sur lequel vous vous trouvez, mon portfolio. <br>
+                Ce site web sert principalement a promouvoir mes projets et par exetention
+                montrer une partie de mes capacitées en dévloppement informatique. <br>
+                Comme vous avez pu le remarquer je m'inspire énormement de l'estetisme de window 95® <br><br>
+                Mon portfolio n'est pas encore terminé et il manque quelques amélioration et projets que je n'ai pas encore ajouté
+                ou bien aboutis. <br>
+                Si vous remarquez un comportement qui vous parrait anormal merci de me transmètre l'infomation pour que
+                je puisse corriger les éventuels bug ou défauts de conception. <br>
+                en vous souhaitant une bonne visite de mon site et un grand merci pour le temps que vous accodez pour l'explorer ! <3
+            </p>
+        </app-window>
 
-                    <p>Salut, je suis The Crock, <br> juste un dev qui aime faire des projets inutiles... <br><br> Si vous voulez vous pouvez jeter un oeil sur le dossier "portfollio" <br>
-                    il y a quelque-uns de mes projets. <br>
-                    S'ils vous intéressent vous pouvez me demander le code je suis totalement open source sur les projets proposés. <br><br> vous pouvez me contacter sur discord ou sur instagram !</p>
+        <app-window window="moi" id="moi-window" title="Moi" icon="img/icons/folder.png">
+            <img id="folder-press-button" src="img/icons/fichierText.png" alt="">
+            <p class="moi-text-pres">présentation</p>
+        </app-window>
 
-                    <div class="alignLogo">
-                        <img class="logoContact" src="img/github.png" alt="">
-                        <a class="lienDiscord" href="https://github.com/sn1675" target="_blank">sn1675</a>
-                    </div>
-                    <br>
-                    <div class="alignLogo">
-                        <img class="logoContact" src="img/discord.png" alt="">
-                        <a class="lienDiscord" href="https://discord.com" target="_blank">fredou0703</a>
-                    </div>
-                    <br>
-                    <div class="alignLogo">
-                        <img class="logoContact" src="img/Instagram_icon.png" alt="">
-                        <a class="lienDiscord" href="https://www.instagram.com/nath.cbt_/" target="_blank">nath.cbt_</a>
-                    </div>
-                </div>
+        <app-window window="press" id="press-window" title="Présentation" icon="img/icons/fichierText.png">
+            <p>Salut, je suis The Crock, <br> juste un dev qui aime faire des projets inutiles... <br><br> Si vous voulez vous pouvez jeter un oeil sur le dossier "portfollio" <br>
+            il y a quelque-uns de mes projets. <br>
+            S'ils vous intéressent vous pouvez me demander le code je suis totalement open source sur les projets proposés. <br><br> vous pouvez me contacter sur discord ou sur instagram !</p>
+
+            <div class="alignLogo">
+                <img class="logoContact" src="img/github.png" alt="">
+                <a class="lienDiscord" href="https://github.com/sn1675" target="_blank">sn1675</a>
             </div>
-        </div>
-
-        <div class="window" id="bin-window">
-            <div class="content">
-                <div class="title-bar">
-                    <div class="title">
-                        <img  class="imgTitle" src="img/icons/been.png" alt="">
-                        <p>Corbeille</p>
-                    </div>
-                    <div class="header" id="bin-header">
-                        <!-- Poignée pour le déplacement -->
-                    </div>
-                    <div class="buttons">
-                        <button class="reduce-button">-</button>
-                        <button class="fullscreen-button">o</button>
-                        <button class="close-button" id="closeButtonbin">x</button>
-                    </div>
-                </div>
-
-                <div class="windowContent">
-                    <p>La corbeille est vide.</p>
-                </div>
+            <br>
+            <div class="alignLogo">
+                <img class="logoContact" src="img/discord.png" alt="">
+                <a class="lienDiscord" href="https://discord.com" target="_blank">fredou0703</a>
             </div>
-        </div>
-    </div>
+            <br>
+            <div class="alignLogo">
+                <img class="logoContact" src="img/Instagram_icon.png" alt="">
+                <a class="lienDiscord" href="https://www.instagram.com/nath.cbt_/" target="_blank">nath.cbt_</a>
+            </div>
+        </app-window>
+
+        <app-window window="bin" id="bin-window" title="Corbeille" icon="img/icons/been.png">
+            <p>La corbeille est vide.</p>
+        </app-window>
 
     <div class="footer">
         <div class="footer-content">
@@ -317,7 +159,7 @@
                 <div class="start-text">Start</div>
             </button>
 
-            <button class="footeronglet" id="Portfolio-footer">
+            <button class="footeronglet" id="portfolio-footer">
                 <img class="portfollio-footer-icon" src="img/icons/folder.png" alt="">
             </button>
 
@@ -329,11 +171,11 @@
                 <img class="portfollio-footer-icon" src="img/icons/fichierText.png" alt="">
             </button>
 
-            <button class="footeronglet" id="gaphical-sort-footer">
+            <button class="footeronglet" id="graphical-sort-footer">
                 <img class="portfollio-footer-icon" src="img/icons/fichierText.png" alt="">
             </button>
 
-            <button class="footeronglet" id="webSite-footer">
+            <button class="footeronglet" id="website-footer">
                 <img class="portfollio-footer-icon" src="img/icons/fichierText.png" alt="">
             </button>
 
@@ -355,6 +197,32 @@
                 <div class="footer-text"></div>
         </div>
     </div>
+
+    </div>
+
+    <template id="win-template">
+        <div data-window="" class="window">
+            <div class="content">
+                <div class="title-bar">
+                    <div class="title">
+                        <img  class="imgTitle" src="" alt="">
+                        <p class="window-title-text">Titre</p>
+                    </div>
+                    <div class="header">
+                        <!-- Poignée pour le déplacement -->
+                    </div>
+                    <div class="buttons">
+                        <button class="reduce-button">-</button>
+                        <button class="fullscreen-button">o</button>
+                        <button class="close-button">x</button>
+                    </div>
+                </div>
+                <div class="windowContent">
+                </div>
+            </div>
+        </div>
+    </template>
+
     <script src="js/main.js"></script>
 </body>
 </html>
