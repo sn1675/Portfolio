@@ -21,15 +21,11 @@
 }
 
 .header {
-    background-color: #000080; /* Couleur de fond de la poignée de fenêtre */
-    height: 1%; /* Hauteur de la poignée */
-    width: 100%;
-    cursor: move; /* Curseur de style "move" pour indiquer la possibilité de déplacement */
-    user-select: none; /* Empêche la sélection de texte pendant le déplacement */
-    padding: 1% 2%; /* Espace de remplissage pour la poignée de fenêtre */
-    font-weight: bold;
-    display: flex;
-    align-items: center;
+    background-color: #000080;
+    flex: 1;            /* prend tout l'espace entre .title et .buttons */
+    cursor: move;
+    user-select: none;
+    align-self: stretch; /* s'étire sur toute la hauteur de la title-bar */
 }
 
 #window-header, #demineur-header, #pyng-pong-header, #graphical-sort-header,
