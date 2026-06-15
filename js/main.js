@@ -120,7 +120,7 @@ document.addEventListener("DOMContentLoaded", function() {
         let heureAcc = date.getHours();
         let minuteAcc = date.getMinutes();
 
-        document.getElementById("hour-footer").innerHTML = heureAcc + ':' + minuteAcc;
+        document.getElementById("hour-footer").innerHTML = String(heureAcc).padStart(2, '0') + ':' + String(minuteAcc).padStart(2, '0');
     } setInterval(printHeure, 10000)
     printHeure();
 });
@@ -149,7 +149,7 @@ document.getElementById('clippy-canvas').addEventListener('click', () => {
     const tips = [
         "Tu peux me clicker dessus pour avoir des tips",
         "Tu peux déplacer les fenêtres !",
-        "Nathan recherche une alternance en cyber peut tu l'aider ?",
+        "Nathan recherche une alternance en cyber peux-tu l'aider ?",
         "Le site est encore en cours de développement."];
 
     let noRep = Math.floor(Math.random() * tips.length);
