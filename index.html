@@ -7,6 +7,15 @@
     <link rel="stylesheet" href="css/styleFen.css">
     <title>Portfolio 95</title>
 </head>
+
+<div id="clippy-container">
+    <div id="clippy-bubble" class="hidden">
+        <p id="clippy-text"></p>
+        <button id="clippy-close">x</button>
+    </div>
+    <canvas id="clippy-canvas" width="124" height="117"></canvas>
+</div>
+
 <body>
     <div class="desktop">
         <div class="elt">
@@ -29,11 +38,7 @@
             <p class="been-text">Corbeille</p>
         </div>
     </div>
-<!--
-    <div id="clippy">
-        <img src="../img/clippy.png" alt="">
-    </div>
--->
+
     <div id="windows95">
         <app-window window="portfolio" id="portfolio-window" title="Portfolio" icon="img/icons/folder.png">
             <p>Jeux :</p>
@@ -222,7 +227,7 @@
             </div>
         </div>
     </template>
-
+    <script src="js/clippy.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

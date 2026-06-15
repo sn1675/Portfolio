@@ -45,16 +45,11 @@ body {
     margin: 0;
 }
 
-/*#clippy {
+#clippy-container {
     display: flex;
     justify-content: end;
     bottom: 0;
 }
-
-#clippy img {
-    height: 10%;
-    width: 10%;
-}*/
 
 .title.p {
     padding: 0%;
@@ -174,4 +169,43 @@ body {
 .taskbar {
     display: flex;
     gap: 5px;
+}
+
+/* CLIPPY */
+#clippy-container {
+    position: fixed;
+    bottom: 50px; /* au dessus de la footer */
+    right: 20px;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+#clippy-canvas {
+    width: 124px;
+    height: 117px;
+    image-rendering: pixelated;
+}
+
+#clippy-bubble {
+    background: #ffffe1;
+    border: 2px solid #000;
+    padding: 8px 10px;
+    margin-bottom: 8px;
+    max-width: 200px;
+    font-size: 100%;
+    position: relative;
+}
+
+#clippy-bubble.hidden { display: none; }
+
+#clippy-close {
+    position: absolute;
+    top: 2px; right: 4px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 80%;
 }

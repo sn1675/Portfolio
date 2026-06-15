@@ -124,3 +124,36 @@ document.addEventListener("DOMContentLoaded", function() {
     } setInterval(printHeure, 10000)
     printHeure();
 });
+
+
+/*CLIPPY*/
+const clippy = new Clippy(
+    document.getElementById('clippy-canvas'),
+    document.getElementById('clippy-text'),
+    document.getElementById('clippy-bubble')
+);
+clippy.loadAnimations();
+
+// Scénario d'accueil
+setTimeout(() => clippy.say("Salut ! Bienvenue le portfolio de Nathan 👋", "Wave"), 2000);
+//setTimeout(() => clippy.say("Clique sur 'Portfolio' pour voir mes projets !", "Explain"), 7000);
+setTimeout(() => clippy.hide(), 9000);
+
+/* //Réactif à l'ouverture des fenêtres
+function openWindow(win) {
+    if (win === windows['portfolio']) clippy.say("Explore mes projets ici !", "Explain");
+}*/
+
+// Clic sur Clippy
+document.getElementById('clippy-canvas').addEventListener('click', () => {
+    const tips = [
+        "Tu peux me clicker dessus pour avoir des tips",
+        "Tu peux déplacer les fenêtres !",
+        "Nathan recherche une alternance en cyber peut tu l'aider ?",
+        "Le site est encore en cours de développement."];
+
+    let noRep = Math.floor(Math.random() * tips.length);
+
+    clippy.say(tips[noRep], "GestureUp");
+    setTimeout(() => clippy.hide(), 9000);
+});
